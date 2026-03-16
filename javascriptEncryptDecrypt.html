@@ -1,0 +1,34 @@
+<html>  
+	<header>
+		<script src="CryptoJS\rollups\aes.js"></script>
+		<script src="libsodiumjs-master\dist\browsers-sumo\sodium.js"></script>
+		<script src="javascriptEncryptDecrypt.js"></script>
+	</header>
+	<body>
+		<form id="sendingOut">
+			Input (to be encrypted):<textarea id="encryptInput" rows="20" cols="40"></textarea>
+			<br />
+			Password: <input id="encryptPassword" type="password">
+			<br />			
+			Output:<p id="encryptOutput"></p>
+			</br />
+			<input type="button" value="Encrypt" onclick="encrypt();" />
+		</form>		
+		<form id="read">
+			Input (to be decrypted):<input id="decryptInput" type="text" size="100">
+			<br />
+			Password: <input id="decryptPassword" type="password">
+			<br />						
+			Output:<p id="decryptOutput"></p>
+			</br />
+			<input type="button" value="Dencrypt" onclick="decrypt();" />
+		</form>
+		<hr />
+		<form id="sixtyFourEncoder">
+			Input (to be encrypted):<input id="encryptSixtyFourInput" type="text" size="40">
+			<br />
+			Output:<p id="encryptSixtyFourOutput"></p>
+			<input type="submit" value="Encrypt" onclick="return encryptSixtyFour();" />
+		</form>
+	</body>
+</html>
